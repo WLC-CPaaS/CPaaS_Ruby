@@ -1,6 +1,6 @@
 # OpenapiClient::VoIPUserApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -9,6 +9,7 @@ All URIs are relative to *http://api.cpaaslabs.net*
 | [**v1_account_accountid_user_userid_delete**](VoIPUserApi.md#v1_account_accountid_user_userid_delete) | **DELETE** /v1/account/{accountid}/user/{userid} | Delete User |
 | [**v1_account_accountid_user_userid_get**](VoIPUserApi.md#v1_account_accountid_user_userid_get) | **GET** /v1/account/{accountid}/user/{userid} | Get User Details |
 | [**v1_account_accountid_user_userid_put**](VoIPUserApi.md#v1_account_accountid_user_userid_put) | **PUT** /v1/account/{accountid}/user/{userid} | Update User |
+| [**v1_account_accountid_user_userid_userauth_post**](VoIPUserApi.md#v1_account_accountid_user_userid_userauth_post) | **POST** /v1/account/{accountid}/user/{userid}/userauth | Impersonate a User |
 
 
 ## v1_account_accountid_user_get
@@ -371,6 +372,81 @@ end
 ### Return type
 
 [**ServiceDocsUserGetSingle**](ServiceDocsUserGetSingle.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## v1_account_accountid_user_userid_userauth_post
+
+> <ServiceDocsImpersonateUserGetSingle> v1_account_accountid_user_userid_userauth_post(accountid, userid, user)
+
+Impersonate a User
+
+Impersonate as another user if you have access to admin.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: BearerAuth
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = OpenapiClient::VoIPUserApi.new
+accountid = 'accountid_example' # String | Account ID, 32 alpha numeric
+userid = 'userid_example' # String | User ID, 32 alpha numeric
+user = OpenapiClient::ServiceVOIPImpersonateUser.new({action: 'impersonate_user'}) # ServiceVOIPImpersonateUser | Payload for impersonate a user
+
+begin
+  # Impersonate a User
+  result = api_instance.v1_account_accountid_user_userid_userauth_post(accountid, userid, user)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling VoIPUserApi->v1_account_accountid_user_userid_userauth_post: #{e}"
+end
+```
+
+#### Using the v1_account_accountid_user_userid_userauth_post_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ServiceDocsImpersonateUserGetSingle>, Integer, Hash)> v1_account_accountid_user_userid_userauth_post_with_http_info(accountid, userid, user)
+
+```ruby
+begin
+  # Impersonate a User
+  data, status_code, headers = api_instance.v1_account_accountid_user_userid_userauth_post_with_http_info(accountid, userid, user)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ServiceDocsImpersonateUserGetSingle>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling VoIPUserApi->v1_account_accountid_user_userid_userauth_post_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **accountid** | **String** | Account ID, 32 alpha numeric |  |
+| **userid** | **String** | User ID, 32 alpha numeric |  |
+| **user** | [**ServiceVOIPImpersonateUser**](ServiceVOIPImpersonateUser.md) | Payload for impersonate a user |  |
+
+### Return type
+
+[**ServiceDocsImpersonateUserGetSingle**](ServiceDocsImpersonateUserGetSingle.md)
 
 ### Authorization
 

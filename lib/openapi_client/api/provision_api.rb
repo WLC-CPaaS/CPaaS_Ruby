@@ -19,7 +19,7 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Retrieve config file
+    # Retrieve the configuration details (e.g., settings and parameters) for a device.
     # @param account_id [String] Account ID, 32 alpha numeric
     # @param filename [String] Name of config file
     # @param [Hash] opts the optional parameters
@@ -29,7 +29,7 @@ module OpenapiClient
       data
     end
 
-    # Retrieve config file
+    # Retrieve the configuration details (e.g., settings and parameters) for a device.
     # @param account_id [String] Account ID, 32 alpha numeric
     # @param filename [String] Name of config file
     # @param [Hash] opts the optional parameters

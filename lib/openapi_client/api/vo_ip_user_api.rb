@@ -379,5 +379,85 @@ module OpenapiClient
       end
       return data, status_code, headers
     end
+
+    # Impersonate a User
+    # Impersonate as another user if you have access to admin.
+    # @param accountid [String] Account ID, 32 alpha numeric
+    # @param userid [String] User ID, 32 alpha numeric
+    # @param user [ServiceVOIPImpersonateUser] Payload for impersonate a user
+    # @param [Hash] opts the optional parameters
+    # @return [ServiceDocsImpersonateUserGetSingle]
+    def v1_account_accountid_user_userid_userauth_post(accountid, userid, user, opts = {})
+      data, _status_code, _headers = v1_account_accountid_user_userid_userauth_post_with_http_info(accountid, userid, user, opts)
+      data
+    end
+
+    # Impersonate a User
+    # Impersonate as another user if you have access to admin.
+    # @param accountid [String] Account ID, 32 alpha numeric
+    # @param userid [String] User ID, 32 alpha numeric
+    # @param user [ServiceVOIPImpersonateUser] Payload for impersonate a user
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(ServiceDocsImpersonateUserGetSingle, Integer, Hash)>] ServiceDocsImpersonateUserGetSingle data, response status code and response headers
+    def v1_account_accountid_user_userid_userauth_post_with_http_info(accountid, userid, user, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: VoIPUserApi.v1_account_accountid_user_userid_userauth_post ...'
+      end
+      # verify the required parameter 'accountid' is set
+      if @api_client.config.client_side_validation && accountid.nil?
+        fail ArgumentError, "Missing the required parameter 'accountid' when calling VoIPUserApi.v1_account_accountid_user_userid_userauth_post"
+      end
+      # verify the required parameter 'userid' is set
+      if @api_client.config.client_side_validation && userid.nil?
+        fail ArgumentError, "Missing the required parameter 'userid' when calling VoIPUserApi.v1_account_accountid_user_userid_userauth_post"
+      end
+      # verify the required parameter 'user' is set
+      if @api_client.config.client_side_validation && user.nil?
+        fail ArgumentError, "Missing the required parameter 'user' when calling VoIPUserApi.v1_account_accountid_user_userid_userauth_post"
+      end
+      # resource path
+      local_var_path = '/v1/account/{accountid}/user/{userid}/userauth'.sub('{' + 'accountid' + '}', CGI.escape(accountid.to_s)).sub('{' + 'userid' + '}', CGI.escape(userid.to_s))
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json']) unless header_params['Accept']
+      # HTTP header 'Content-Type'
+      content_type = @api_client.select_header_content_type(['application/json'])
+      if !content_type.nil?
+          header_params['Content-Type'] = content_type
+      end
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(user)
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'ServiceDocsImpersonateUserGetSingle'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['BearerAuth']
+
+      new_options = opts.merge(
+        :operation => :"VoIPUserApi.v1_account_accountid_user_userid_userauth_post",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: VoIPUserApi#v1_account_accountid_user_userid_userauth_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
   end
 end

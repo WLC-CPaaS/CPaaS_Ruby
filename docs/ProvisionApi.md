@@ -1,6 +1,6 @@
 # OpenapiClient::ProvisionApi
 
-All URIs are relative to *http://api.cpaaslabs.net*
+All URIs are relative to *http://API_HOSTNAME*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -13,7 +13,7 @@ All URIs are relative to *http://api.cpaaslabs.net*
 
 
 
-Retrieve config file
+Retrieve the configuration details (e.g., settings and parameters) for a device.
 
 ### Examples
 
