@@ -22,7 +22,7 @@ module OpenapiClient
     # Get E911 List
     # Obtain e911 URIs associated with the provided account ID.
     # @param [Hash] opts the optional parameters
-    # @return [ServiceDocE911URIsApiOutput]
+    # @return [ServiceDocsE911URIsApiOutput]
     def v1_e911_get(opts = {})
       data, _status_code, _headers = v1_e911_get_with_http_info(opts)
       data
@@ -31,7 +31,7 @@ module OpenapiClient
     # Get E911 List
     # Obtain e911 URIs associated with the provided account ID.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ServiceDocE911URIsApiOutput, Integer, Hash)>] ServiceDocE911URIsApiOutput data, response status code and response headers
+    # @return [Array<(ServiceDocsE911URIsApiOutput, Integer, Hash)>] ServiceDocsE911URIsApiOutput data, response status code and response headers
     def v1_e911_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: E911Api.v1_e911_get ...'
@@ -54,7 +54,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ServiceDocE911URIsApiOutput'
+      return_type = opts[:debug_return_type] || 'ServiceDocsE911URIsApiOutput'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -80,7 +80,7 @@ module OpenapiClient
     # Edit the provision location.
     # @param location_id [String] Location ID
     # @param [Hash] opts the optional parameters
-    # @return [ServiceDocE911ActiveLocationOutput]
+    # @return [ServiceDocsE911ActiveLocationOutput]
     def v1_e911_location_location_id_activate_put(location_id, opts = {})
       data, _status_code, _headers = v1_e911_location_location_id_activate_put_with_http_info(location_id, opts)
       data
@@ -90,7 +90,7 @@ module OpenapiClient
     # Edit the provision location.
     # @param location_id [String] Location ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ServiceDocE911ActiveLocationOutput, Integer, Hash)>] ServiceDocE911ActiveLocationOutput data, response status code and response headers
+    # @return [Array<(ServiceDocsE911ActiveLocationOutput, Integer, Hash)>] ServiceDocsE911ActiveLocationOutput data, response status code and response headers
     def v1_e911_location_location_id_activate_put_with_http_info(location_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: E911Api.v1_e911_location_location_id_activate_put ...'
@@ -117,7 +117,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ServiceDocE911ActiveLocationOutput'
+      return_type = opts[:debug_return_type] || 'ServiceDocsE911ActiveLocationOutput'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -143,7 +143,7 @@ module OpenapiClient
     # Remove the location.
     # @param location_id [String] Location ID
     # @param [Hash] opts the optional parameters
-    # @return [ServiceDocE911RemoveLocationOutput]
+    # @return [ServiceDocsE911RemoveLocationOutput]
     def v1_e911_location_location_id_delete(location_id, opts = {})
       data, _status_code, _headers = v1_e911_location_location_id_delete_with_http_info(location_id, opts)
       data
@@ -153,7 +153,7 @@ module OpenapiClient
     # Remove the location.
     # @param location_id [String] Location ID
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ServiceDocE911RemoveLocationOutput, Integer, Hash)>] ServiceDocE911RemoveLocationOutput data, response status code and response headers
+    # @return [Array<(ServiceDocsE911RemoveLocationOutput, Integer, Hash)>] ServiceDocsE911RemoveLocationOutput data, response status code and response headers
     def v1_e911_location_location_id_delete_with_http_info(location_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: E911Api.v1_e911_location_location_id_delete ...'
@@ -180,7 +180,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ServiceDocE911RemoveLocationOutput'
+      return_type = opts[:debug_return_type] || 'ServiceDocsE911RemoveLocationOutput'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -206,7 +206,7 @@ module OpenapiClient
     # Validate the location details.
     # @param req_body [ServiceE911ValidateLocationInput] location details
     # @param [Hash] opts the optional parameters
-    # @return [ServiceDocE911ValidateLocationOutput]
+    # @return [ServiceDocsE911ValidateLocationOutput]
     def v1_e911_location_validate_put(req_body, opts = {})
       data, _status_code, _headers = v1_e911_location_validate_put_with_http_info(req_body, opts)
       data
@@ -216,7 +216,7 @@ module OpenapiClient
     # Validate the location details.
     # @param req_body [ServiceE911ValidateLocationInput] location details
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ServiceDocE911ValidateLocationOutput, Integer, Hash)>] ServiceDocE911ValidateLocationOutput data, response status code and response headers
+    # @return [Array<(ServiceDocsE911ValidateLocationOutput, Integer, Hash)>] ServiceDocsE911ValidateLocationOutput data, response status code and response headers
     def v1_e911_location_validate_put_with_http_info(req_body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: E911Api.v1_e911_location_validate_put ...'
@@ -248,7 +248,7 @@ module OpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(req_body)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ServiceDocE911ValidateLocationOutput'
+      return_type = opts[:debug_return_type] || 'ServiceDocsE911ValidateLocationOutput'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -274,7 +274,7 @@ module OpenapiClient
     # Delete the e911 URI connected with the account URI.
     # @param phone_number [String] Phone Number
     # @param [Hash] opts the optional parameters
-    # @return [ServiceDocE911RemoveURIApiOutput]
+    # @return [ServiceDocsE911RemoveURIApiOutput]
     def v1_e911_phone_number_delete(phone_number, opts = {})
       data, _status_code, _headers = v1_e911_phone_number_delete_with_http_info(phone_number, opts)
       data
@@ -284,7 +284,7 @@ module OpenapiClient
     # Delete the e911 URI connected with the account URI.
     # @param phone_number [String] Phone Number
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ServiceDocE911RemoveURIApiOutput, Integer, Hash)>] ServiceDocE911RemoveURIApiOutput data, response status code and response headers
+    # @return [Array<(ServiceDocsE911RemoveURIApiOutput, Integer, Hash)>] ServiceDocsE911RemoveURIApiOutput data, response status code and response headers
     def v1_e911_phone_number_delete_with_http_info(phone_number, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: E911Api.v1_e911_phone_number_delete ...'
@@ -311,7 +311,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ServiceDocE911RemoveURIApiOutput'
+      return_type = opts[:debug_return_type] || 'ServiceDocsE911RemoveURIApiOutput'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -337,7 +337,7 @@ module OpenapiClient
     # Get the e911 location connected with the URI.
     # @param phone_number [String] Phone Number
     # @param [Hash] opts the optional parameters
-    # @return [ServiceDocE911ActiveLocationURIApiOutput]
+    # @return [ServiceDocsE911ActiveLocationURIApiOutput]
     def v1_e911_phone_number_location_active_get(phone_number, opts = {})
       data, _status_code, _headers = v1_e911_phone_number_location_active_get_with_http_info(phone_number, opts)
       data
@@ -347,7 +347,7 @@ module OpenapiClient
     # Get the e911 location connected with the URI.
     # @param phone_number [String] Phone Number
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ServiceDocE911ActiveLocationURIApiOutput, Integer, Hash)>] ServiceDocE911ActiveLocationURIApiOutput data, response status code and response headers
+    # @return [Array<(ServiceDocsE911ActiveLocationURIApiOutput, Integer, Hash)>] ServiceDocsE911ActiveLocationURIApiOutput data, response status code and response headers
     def v1_e911_phone_number_location_active_get_with_http_info(phone_number, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: E911Api.v1_e911_phone_number_location_active_get ...'
@@ -374,7 +374,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ServiceDocE911ActiveLocationURIApiOutput'
+      return_type = opts[:debug_return_type] || 'ServiceDocsE911ActiveLocationURIApiOutput'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -400,7 +400,7 @@ module OpenapiClient
     # Access a list of the e911 locations associated with the provided URI.
     # @param phone_number [String] Phone Number
     # @param [Hash] opts the optional parameters
-    # @return [ServiceDocE911LocationsURIApiOutput]
+    # @return [ServiceDocsE911LocationsURIApiOutput]
     def v1_e911_phone_number_location_get(phone_number, opts = {})
       data, _status_code, _headers = v1_e911_phone_number_location_get_with_http_info(phone_number, opts)
       data
@@ -410,7 +410,7 @@ module OpenapiClient
     # Access a list of the e911 locations associated with the provided URI.
     # @param phone_number [String] Phone Number
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ServiceDocE911LocationsURIApiOutput, Integer, Hash)>] ServiceDocE911LocationsURIApiOutput data, response status code and response headers
+    # @return [Array<(ServiceDocsE911LocationsURIApiOutput, Integer, Hash)>] ServiceDocsE911LocationsURIApiOutput data, response status code and response headers
     def v1_e911_phone_number_location_get_with_http_info(phone_number, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: E911Api.v1_e911_phone_number_location_get ...'
@@ -437,7 +437,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ServiceDocE911LocationsURIApiOutput'
+      return_type = opts[:debug_return_type] || 'ServiceDocsE911LocationsURIApiOutput'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
@@ -463,7 +463,7 @@ module OpenapiClient
     # Enter new location details.
     # @param req_body [ServiceE911AddLocationInput] location details
     # @param [Hash] opts the optional parameters
-    # @return [ServiceDocE911AddLocationOutput]
+    # @return [ServiceDocsE911AddLocationOutput]
     def v1_e911_post(req_body, opts = {})
       data, _status_code, _headers = v1_e911_post_with_http_info(req_body, opts)
       data
@@ -473,7 +473,7 @@ module OpenapiClient
     # Enter new location details.
     # @param req_body [ServiceE911AddLocationInput] location details
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ServiceDocE911AddLocationOutput, Integer, Hash)>] ServiceDocE911AddLocationOutput data, response status code and response headers
+    # @return [Array<(ServiceDocsE911AddLocationOutput, Integer, Hash)>] ServiceDocsE911AddLocationOutput data, response status code and response headers
     def v1_e911_post_with_http_info(req_body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: E911Api.v1_e911_post ...'
@@ -505,7 +505,7 @@ module OpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(req_body)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ServiceDocE911AddLocationOutput'
+      return_type = opts[:debug_return_type] || 'ServiceDocsE911AddLocationOutput'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []

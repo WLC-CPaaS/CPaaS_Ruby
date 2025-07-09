@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **data** | [**ServiceQueueRecipientOutputFull**](ServiceQueueRecipientOutputFull.md) |  | [optional] |
+| **data** | [**ServiceQueueRecipientOutput**](ServiceQueueRecipientOutput.md) |  | [optional] |
 | **next_start_key** | **String** | List Pagination: Used to get the next page of results. Will not exist if this is the last page. | [optional] |
 | **page_size** | **Integer** | List Pagination: The number of results returned in this page | [optional] |
 | **request_id** | **String** | Unique id for each request | [optional] |

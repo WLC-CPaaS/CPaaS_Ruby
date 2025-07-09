@@ -57,7 +57,7 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'data' => :'ServiceQueueRecipientOutputFull',
+        :'data' => :'ServiceQueueRecipientOutput',
         :'next_start_key' => :'String',
         :'page_size' => :'Integer',
         :'request_id' => :'String',

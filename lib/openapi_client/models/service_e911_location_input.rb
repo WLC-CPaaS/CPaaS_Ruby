@@ -111,8 +111,6 @@ module OpenapiClient
 
       if attributes.key?(:'address_1')
         self.address_1 = attributes[:'address_1']
-      else
-        self.address_1 = nil
       end
 
       if attributes.key?(:'address_2')
@@ -121,8 +119,6 @@ module OpenapiClient
 
       if attributes.key?(:'community')
         self.community = attributes[:'community']
-      else
-        self.community = nil
       end
 
       if attributes.key?(:'plus_four')
@@ -131,18 +127,16 @@ module OpenapiClient
 
       if attributes.key?(:'postal_code')
         self.postal_code = attributes[:'postal_code']
-      else
-        self.postal_code = nil
       end
 
       if attributes.key?(:'state')
         self.state = attributes[:'state']
-      else
-        self.state = nil
       end
 
       if attributes.key?(:'type')
         self.type = attributes[:'type']
+      else
+        self.type = nil
       end
     end
 
@@ -151,20 +145,8 @@ module OpenapiClient
     def list_invalid_properties
       warn '[DEPRECATED] the `list_invalid_properties` method is obsolete'
       invalid_properties = Array.new
-      if @address_1.nil?
-        invalid_properties.push('invalid value for "address_1", address_1 cannot be nil.')
-      end
-
-      if @community.nil?
-        invalid_properties.push('invalid value for "community", community cannot be nil.')
-      end
-
-      if @postal_code.nil?
-        invalid_properties.push('invalid value for "postal_code", postal_code cannot be nil.')
-      end
-
-      if @state.nil?
-        invalid_properties.push('invalid value for "state", state cannot be nil.')
+      if @type.nil?
+        invalid_properties.push('invalid value for "type", type cannot be nil.')
       end
 
       invalid_properties
@@ -174,53 +156,10 @@ module OpenapiClient
     # @return true if the model is valid
     def valid?
       warn '[DEPRECATED] the `valid?` method is obsolete'
-      return false if @address_1.nil?
-      return false if @community.nil?
-      return false if @postal_code.nil?
-      return false if @state.nil?
+      return false if @type.nil?
       type_validator = EnumAttributeValidator.new('String', ["ADDRESS"])
       return false unless type_validator.valid?(@type)
       true
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] address_1 Value to be assigned
-    def address_1=(address_1)
-      if address_1.nil?
-        fail ArgumentError, 'address_1 cannot be nil'
-      end
-
-      @address_1 = address_1
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] community Value to be assigned
-    def community=(community)
-      if community.nil?
-        fail ArgumentError, 'community cannot be nil'
-      end
-
-      @community = community
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] postal_code Value to be assigned
-    def postal_code=(postal_code)
-      if postal_code.nil?
-        fail ArgumentError, 'postal_code cannot be nil'
-      end
-
-      @postal_code = postal_code
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] state Value to be assigned
-    def state=(state)
-      if state.nil?
-        fail ArgumentError, 'state cannot be nil'
-      end
-
-      @state = state
     end
 
     # Custom attribute writer method checking allowed values (enum).

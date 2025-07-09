@@ -24,7 +24,7 @@ module OpenapiClient
     # @param account_id [String] Account ID, 32 alpha numeric
     # @param req_body [ServiceVOIPQueueMembershipAddData] payload fields
     # @param [Hash] opts the optional parameters
-    # @return [ServiceDocsCallQueueMemberGetSingle]
+    # @return [ServiceDocsQueueMembershipOutput]
     def v1_account_account_id_queuemembership_post(account_id, req_body, opts = {})
       data, _status_code, _headers = v1_account_account_id_queuemembership_post_with_http_info(account_id, req_body, opts)
       data
@@ -35,7 +35,7 @@ module OpenapiClient
     # @param account_id [String] Account ID, 32 alpha numeric
     # @param req_body [ServiceVOIPQueueMembershipAddData] payload fields
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ServiceDocsCallQueueMemberGetSingle, Integer, Hash)>] ServiceDocsCallQueueMemberGetSingle data, response status code and response headers
+    # @return [Array<(ServiceDocsQueueMembershipOutput, Integer, Hash)>] ServiceDocsQueueMembershipOutput data, response status code and response headers
     def v1_account_account_id_queuemembership_post_with_http_info(account_id, req_body, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CallQueueMembershipApi.v1_account_account_id_queuemembership_post ...'
@@ -71,7 +71,7 @@ module OpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(req_body)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ServiceDocsCallQueueMemberGetSingle'
+      return_type = opts[:debug_return_type] || 'ServiceDocsQueueMembershipOutput'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['BearerAuth']

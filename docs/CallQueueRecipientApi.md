@@ -1,6 +1,6 @@
 # OpenapiClient::CallQueueRecipientApi
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -11,7 +11,7 @@ All URIs are relative to *http://API_HOSTNAME*
 
 ## v1_account_account_id_loginrecipient_recipient_id_post
 
-> <ServiceDocsCallQueueResponseShort> v1_account_account_id_loginrecipient_recipient_id_post(account_id, recipient_id, req_body)
+> <ServiceDocsCallQueueRecipientLoginLogoutOutput> v1_account_account_id_loginrecipient_recipient_id_post(account_id, recipient_id, req_body)
 
 Login as Recipient
 
@@ -48,7 +48,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceDocsCallQueueResponseShort>, Integer, Hash)> v1_account_account_id_loginrecipient_recipient_id_post_with_http_info(account_id, recipient_id, req_body)
+> <Array(<ServiceDocsCallQueueRecipientLoginLogoutOutput>, Integer, Hash)> v1_account_account_id_loginrecipient_recipient_id_post_with_http_info(account_id, recipient_id, req_body)
 
 ```ruby
 begin
@@ -56,7 +56,7 @@ begin
   data, status_code, headers = api_instance.v1_account_account_id_loginrecipient_recipient_id_post_with_http_info(account_id, recipient_id, req_body)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceDocsCallQueueResponseShort>
+  p data # => <ServiceDocsCallQueueRecipientLoginLogoutOutput>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling CallQueueRecipientApi->v1_account_account_id_loginrecipient_recipient_id_post_with_http_info: #{e}"
 end
@@ -72,7 +72,7 @@ end
 
 ### Return type
 
-[**ServiceDocsCallQueueResponseShort**](ServiceDocsCallQueueResponseShort.md)
+[**ServiceDocsCallQueueRecipientLoginLogoutOutput**](ServiceDocsCallQueueRecipientLoginLogoutOutput.md)
 
 ### Authorization
 

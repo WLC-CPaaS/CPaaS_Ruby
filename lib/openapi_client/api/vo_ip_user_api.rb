@@ -381,7 +381,7 @@ module OpenapiClient
     end
 
     # Impersonate a User
-    # Impersonate as another user if you have access to admin.
+    # Retrieve a token for making presence calls.
     # @param accountid [String] Account ID, 32 alpha numeric
     # @param userid [String] User ID, 32 alpha numeric
     # @param user [ServiceVOIPImpersonateUser] Payload for impersonate a user
@@ -393,7 +393,7 @@ module OpenapiClient
     end
 
     # Impersonate a User
-    # Impersonate as another user if you have access to admin.
+    # Retrieve a token for making presence calls.
     # @param accountid [String] Account ID, 32 alpha numeric
     # @param userid [String] User ID, 32 alpha numeric
     # @param user [ServiceVOIPImpersonateUser] Payload for impersonate a user

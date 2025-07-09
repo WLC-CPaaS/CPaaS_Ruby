@@ -1,6 +1,6 @@
 # OpenapiClient::CallQueueMembershipApi
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -11,7 +11,7 @@ All URIs are relative to *http://API_HOSTNAME*
 
 ## v1_account_account_id_queuemembership_post
 
-> <ServiceDocsCallQueueMemberGetSingle> v1_account_account_id_queuemembership_post(account_id, req_body)
+> <ServiceDocsQueueMembershipOutput> v1_account_account_id_queuemembership_post(account_id, req_body)
 
 Grant Queue Membership to User
 
@@ -47,7 +47,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceDocsCallQueueMemberGetSingle>, Integer, Hash)> v1_account_account_id_queuemembership_post_with_http_info(account_id, req_body)
+> <Array(<ServiceDocsQueueMembershipOutput>, Integer, Hash)> v1_account_account_id_queuemembership_post_with_http_info(account_id, req_body)
 
 ```ruby
 begin
@@ -55,7 +55,7 @@ begin
   data, status_code, headers = api_instance.v1_account_account_id_queuemembership_post_with_http_info(account_id, req_body)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceDocsCallQueueMemberGetSingle>
+  p data # => <ServiceDocsQueueMembershipOutput>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling CallQueueMembershipApi->v1_account_account_id_queuemembership_post_with_http_info: #{e}"
 end
@@ -70,7 +70,7 @@ end
 
 ### Return type
 
-[**ServiceDocsCallQueueMemberGetSingle**](ServiceDocsCallQueueMemberGetSingle.md)
+[**ServiceDocsQueueMembershipOutput**](ServiceDocsQueueMembershipOutput.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 # OpenapiClient::E911Api
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -16,7 +16,7 @@ All URIs are relative to *http://API_HOSTNAME*
 
 ## v1_e911_get
 
-> <ServiceDocE911URIsApiOutput> v1_e911_get
+> <ServiceDocsE911URIsApiOutput> v1_e911_get
 
 Get E911 List
 
@@ -43,7 +43,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceDocE911URIsApiOutput>, Integer, Hash)> v1_e911_get_with_http_info
+> <Array(<ServiceDocsE911URIsApiOutput>, Integer, Hash)> v1_e911_get_with_http_info
 
 ```ruby
 begin
@@ -51,7 +51,7 @@ begin
   data, status_code, headers = api_instance.v1_e911_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceDocE911URIsApiOutput>
+  p data # => <ServiceDocsE911URIsApiOutput>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling E911Api->v1_e911_get_with_http_info: #{e}"
 end
@@ -63,7 +63,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ServiceDocE911URIsApiOutput**](ServiceDocE911URIsApiOutput.md)
+[**ServiceDocsE911URIsApiOutput**](ServiceDocsE911URIsApiOutput.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ No authorization required
 
 ## v1_e911_location_location_id_activate_put
 
-> <ServiceDocE911ActiveLocationOutput> v1_e911_location_location_id_activate_put(location_id)
+> <ServiceDocsE911ActiveLocationOutput> v1_e911_location_location_id_activate_put(location_id)
 
 Activate E911 Location
 
@@ -105,7 +105,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceDocE911ActiveLocationOutput>, Integer, Hash)> v1_e911_location_location_id_activate_put_with_http_info(location_id)
+> <Array(<ServiceDocsE911ActiveLocationOutput>, Integer, Hash)> v1_e911_location_location_id_activate_put_with_http_info(location_id)
 
 ```ruby
 begin
@@ -113,7 +113,7 @@ begin
   data, status_code, headers = api_instance.v1_e911_location_location_id_activate_put_with_http_info(location_id)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceDocE911ActiveLocationOutput>
+  p data # => <ServiceDocsE911ActiveLocationOutput>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling E911Api->v1_e911_location_location_id_activate_put_with_http_info: #{e}"
 end
@@ -127,7 +127,7 @@ end
 
 ### Return type
 
-[**ServiceDocE911ActiveLocationOutput**](ServiceDocE911ActiveLocationOutput.md)
+[**ServiceDocsE911ActiveLocationOutput**](ServiceDocsE911ActiveLocationOutput.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ No authorization required
 
 ## v1_e911_location_location_id_delete
 
-> <ServiceDocE911RemoveLocationOutput> v1_e911_location_location_id_delete(location_id)
+> <ServiceDocsE911RemoveLocationOutput> v1_e911_location_location_id_delete(location_id)
 
 Delete E911 Location
 
@@ -169,7 +169,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceDocE911RemoveLocationOutput>, Integer, Hash)> v1_e911_location_location_id_delete_with_http_info(location_id)
+> <Array(<ServiceDocsE911RemoveLocationOutput>, Integer, Hash)> v1_e911_location_location_id_delete_with_http_info(location_id)
 
 ```ruby
 begin
@@ -177,7 +177,7 @@ begin
   data, status_code, headers = api_instance.v1_e911_location_location_id_delete_with_http_info(location_id)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceDocE911RemoveLocationOutput>
+  p data # => <ServiceDocsE911RemoveLocationOutput>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling E911Api->v1_e911_location_location_id_delete_with_http_info: #{e}"
 end
@@ -191,7 +191,7 @@ end
 
 ### Return type
 
-[**ServiceDocE911RemoveLocationOutput**](ServiceDocE911RemoveLocationOutput.md)
+[**ServiceDocsE911RemoveLocationOutput**](ServiceDocsE911RemoveLocationOutput.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ No authorization required
 
 ## v1_e911_location_validate_put
 
-> <ServiceDocE911ValidateLocationOutput> v1_e911_location_validate_put(req_body)
+> <ServiceDocsE911ValidateLocationOutput> v1_e911_location_validate_put(req_body)
 
 Validate a Location
 
@@ -218,7 +218,7 @@ require 'time'
 require 'openapi_client'
 
 api_instance = OpenapiClient::E911Api.new
-req_body = OpenapiClient::ServiceE911ValidateLocationInput.new({location: OpenapiClient::ServiceE911LocationInput.new({address_1: 'address_1_example', community: 'community_example', postal_code: 'postal_code_example', state: 'state_example'})}) # ServiceE911ValidateLocationInput | location details
+req_body = OpenapiClient::ServiceE911ValidateLocationInput.new # ServiceE911ValidateLocationInput | location details
 
 begin
   # Validate a Location
@@ -233,7 +233,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceDocE911ValidateLocationOutput>, Integer, Hash)> v1_e911_location_validate_put_with_http_info(req_body)
+> <Array(<ServiceDocsE911ValidateLocationOutput>, Integer, Hash)> v1_e911_location_validate_put_with_http_info(req_body)
 
 ```ruby
 begin
@@ -241,7 +241,7 @@ begin
   data, status_code, headers = api_instance.v1_e911_location_validate_put_with_http_info(req_body)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceDocE911ValidateLocationOutput>
+  p data # => <ServiceDocsE911ValidateLocationOutput>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling E911Api->v1_e911_location_validate_put_with_http_info: #{e}"
 end
@@ -255,7 +255,7 @@ end
 
 ### Return type
 
-[**ServiceDocE911ValidateLocationOutput**](ServiceDocE911ValidateLocationOutput.md)
+[**ServiceDocsE911ValidateLocationOutput**](ServiceDocsE911ValidateLocationOutput.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ No authorization required
 
 ## v1_e911_phone_number_delete
 
-> <ServiceDocE911RemoveURIApiOutput> v1_e911_phone_number_delete(phone_number)
+> <ServiceDocsE911RemoveURIApiOutput> v1_e911_phone_number_delete(phone_number)
 
 Delete E911 Phone Number
 
@@ -297,7 +297,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceDocE911RemoveURIApiOutput>, Integer, Hash)> v1_e911_phone_number_delete_with_http_info(phone_number)
+> <Array(<ServiceDocsE911RemoveURIApiOutput>, Integer, Hash)> v1_e911_phone_number_delete_with_http_info(phone_number)
 
 ```ruby
 begin
@@ -305,7 +305,7 @@ begin
   data, status_code, headers = api_instance.v1_e911_phone_number_delete_with_http_info(phone_number)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceDocE911RemoveURIApiOutput>
+  p data # => <ServiceDocsE911RemoveURIApiOutput>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling E911Api->v1_e911_phone_number_delete_with_http_info: #{e}"
 end
@@ -319,7 +319,7 @@ end
 
 ### Return type
 
-[**ServiceDocE911RemoveURIApiOutput**](ServiceDocE911RemoveURIApiOutput.md)
+[**ServiceDocsE911RemoveURIApiOutput**](ServiceDocsE911RemoveURIApiOutput.md)
 
 ### Authorization
 
@@ -333,7 +333,7 @@ No authorization required
 
 ## v1_e911_phone_number_location_active_get
 
-> <ServiceDocE911ActiveLocationURIApiOutput> v1_e911_phone_number_location_active_get(phone_number)
+> <ServiceDocsE911ActiveLocationURIApiOutput> v1_e911_phone_number_location_active_get(phone_number)
 
 Get Actvie Location for a Phone Number
 
@@ -361,7 +361,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceDocE911ActiveLocationURIApiOutput>, Integer, Hash)> v1_e911_phone_number_location_active_get_with_http_info(phone_number)
+> <Array(<ServiceDocsE911ActiveLocationURIApiOutput>, Integer, Hash)> v1_e911_phone_number_location_active_get_with_http_info(phone_number)
 
 ```ruby
 begin
@@ -369,7 +369,7 @@ begin
   data, status_code, headers = api_instance.v1_e911_phone_number_location_active_get_with_http_info(phone_number)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceDocE911ActiveLocationURIApiOutput>
+  p data # => <ServiceDocsE911ActiveLocationURIApiOutput>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling E911Api->v1_e911_phone_number_location_active_get_with_http_info: #{e}"
 end
@@ -383,7 +383,7 @@ end
 
 ### Return type
 
-[**ServiceDocE911ActiveLocationURIApiOutput**](ServiceDocE911ActiveLocationURIApiOutput.md)
+[**ServiceDocsE911ActiveLocationURIApiOutput**](ServiceDocsE911ActiveLocationURIApiOutput.md)
 
 ### Authorization
 
@@ -397,7 +397,7 @@ No authorization required
 
 ## v1_e911_phone_number_location_get
 
-> <ServiceDocE911LocationsURIApiOutput> v1_e911_phone_number_location_get(phone_number)
+> <ServiceDocsE911LocationsURIApiOutput> v1_e911_phone_number_location_get(phone_number)
 
 Get Location List for Phone Number
 
@@ -425,7 +425,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceDocE911LocationsURIApiOutput>, Integer, Hash)> v1_e911_phone_number_location_get_with_http_info(phone_number)
+> <Array(<ServiceDocsE911LocationsURIApiOutput>, Integer, Hash)> v1_e911_phone_number_location_get_with_http_info(phone_number)
 
 ```ruby
 begin
@@ -433,7 +433,7 @@ begin
   data, status_code, headers = api_instance.v1_e911_phone_number_location_get_with_http_info(phone_number)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceDocE911LocationsURIApiOutput>
+  p data # => <ServiceDocsE911LocationsURIApiOutput>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling E911Api->v1_e911_phone_number_location_get_with_http_info: #{e}"
 end
@@ -447,7 +447,7 @@ end
 
 ### Return type
 
-[**ServiceDocE911LocationsURIApiOutput**](ServiceDocE911LocationsURIApiOutput.md)
+[**ServiceDocsE911LocationsURIApiOutput**](ServiceDocsE911LocationsURIApiOutput.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ No authorization required
 
 ## v1_e911_post
 
-> <ServiceDocE911AddLocationOutput> v1_e911_post(req_body)
+> <ServiceDocsE911AddLocationOutput> v1_e911_post(req_body)
 
 Create an E911 Location
 
@@ -474,7 +474,7 @@ require 'time'
 require 'openapi_client'
 
 api_instance = OpenapiClient::E911Api.new
-req_body = OpenapiClient::ServiceE911AddLocationInput.new({location: OpenapiClient::ServiceE911LocationInput.new({address_1: 'address_1_example', community: 'community_example', postal_code: 'postal_code_example', state: 'state_example'}), uri: OpenapiClient::ServiceE911URIInput.new({caller_name: 'caller_name_example', uri: 'uri_example'})}) # ServiceE911AddLocationInput | location details
+req_body = OpenapiClient::ServiceE911AddLocationInput.new # ServiceE911AddLocationInput | location details
 
 begin
   # Create an E911 Location
@@ -489,7 +489,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceDocE911AddLocationOutput>, Integer, Hash)> v1_e911_post_with_http_info(req_body)
+> <Array(<ServiceDocsE911AddLocationOutput>, Integer, Hash)> v1_e911_post_with_http_info(req_body)
 
 ```ruby
 begin
@@ -497,7 +497,7 @@ begin
   data, status_code, headers = api_instance.v1_e911_post_with_http_info(req_body)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceDocE911AddLocationOutput>
+  p data # => <ServiceDocsE911AddLocationOutput>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling E911Api->v1_e911_post_with_http_info: #{e}"
 end
@@ -511,7 +511,7 @@ end
 
 ### Return type
 
-[**ServiceDocE911AddLocationOutput**](ServiceDocE911AddLocationOutput.md)
+[**ServiceDocsE911AddLocationOutput**](ServiceDocsE911AddLocationOutput.md)
 
 ### Authorization
 

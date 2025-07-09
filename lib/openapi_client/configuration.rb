@@ -158,7 +158,7 @@ module OpenapiClient
 
     def initialize
       @scheme = 'http'
-      @host = 'API_HOSTNAME'
+      @host = 'api.beta.cpaaslabs.net'
       @base_path = ''
       @server_index = nil
       @server_operation_index = {}
@@ -258,7 +258,7 @@ module OpenapiClient
     def server_settings
       [
         {
-          url: "//API_HOSTNAME",
+          url: "//api.beta.cpaaslabs.net",
           description: "No description provided",
         }
       ]

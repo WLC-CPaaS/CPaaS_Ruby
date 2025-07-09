@@ -19,7 +19,76 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Get Family
+    # Get Config File Details
+    # Retrieve the configuration details (e.g., settings and parameters) for a device.
+    # @param account_id [String] Account ID, 32 alpha numeric
+    # @param filename [String] Name of config file
+    # @param [Hash] opts the optional parameters
+    # @return [File]
+    def v1_account_account_id_provision_filename_get(account_id, filename, opts = {})
+      data, _status_code, _headers = v1_account_account_id_provision_filename_get_with_http_info(account_id, filename, opts)
+      data
+    end
+
+    # Get Config File Details
+    # Retrieve the configuration details (e.g., settings and parameters) for a device.
+    # @param account_id [String] Account ID, 32 alpha numeric
+    # @param filename [String] Name of config file
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(File, Integer, Hash)>] File data, response status code and response headers
+    def v1_account_account_id_provision_filename_get_with_http_info(account_id, filename, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: ProvisioningApi.v1_account_account_id_provision_filename_get ...'
+      end
+      # verify the required parameter 'account_id' is set
+      if @api_client.config.client_side_validation && account_id.nil?
+        fail ArgumentError, "Missing the required parameter 'account_id' when calling ProvisioningApi.v1_account_account_id_provision_filename_get"
+      end
+      # verify the required parameter 'filename' is set
+      if @api_client.config.client_side_validation && filename.nil?
+        fail ArgumentError, "Missing the required parameter 'filename' when calling ProvisioningApi.v1_account_account_id_provision_filename_get"
+      end
+      # resource path
+      local_var_path = '/v1/account/{accountID}/provision/{filename}'.sub('{' + 'accountID' + '}', CGI.escape(account_id.to_s)).sub('{' + 'filename' + '}', CGI.escape(filename.to_s))
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['*/*']) unless header_params['Accept']
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'File'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"ProvisioningApi.v1_account_account_id_provision_filename_get",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ProvisioningApi#v1_account_account_id_provision_filename_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get Family Details
     # Retrieve a family's details by the randomly generated ID.
     # @param brand [String] brand
     # @param family [String] family
@@ -30,7 +99,7 @@ module OpenapiClient
       data
     end
 
-    # Get Family
+    # Get Family Details
     # Retrieve a family&#39;s details by the randomly generated ID.
     # @param brand [String] brand
     # @param family [String] family
@@ -173,7 +242,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Get Model
+    # Get Model Details
     # Retrieve a model's details by the randomly generated ID.
     # @param brand [String] brand
     # @param family [String] family
@@ -185,7 +254,7 @@ module OpenapiClient
       data
     end
 
-    # Get Model
+    # Get Model Details
     # Retrieve a model&#39;s details by the randomly generated ID.
     # @param brand [String] brand
     # @param family [String] family
@@ -342,7 +411,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Get Template
+    # Get Template Details
     # Retrieve details about a template for a model by the randomly generated ID.
     # @param brand [String] brand
     # @param family [String] family
@@ -355,7 +424,7 @@ module OpenapiClient
       data
     end
 
-    # Get Template
+    # Get Template Details
     # Retrieve details about a template for a model by the randomly generated ID.
     # @param brand [String] brand
     # @param family [String] family
@@ -502,7 +571,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Get Brand
+    # Get Brand Details
     # Retrieve a brand's details by the randomly generated ID.
     # @param brand [String] brand id to retrieve a brand
     # @param [Hash] opts the optional parameters
@@ -512,7 +581,7 @@ module OpenapiClient
       data
     end
 
-    # Get Brand
+    # Get Brand Details
     # Retrieve a brand&#39;s details by the randomly generated ID.
     # @param brand [String] brand id to retrieve a brand
     # @param [Hash] opts the optional parameters
@@ -565,7 +634,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Get Brand
+    # Get Brand List
     # Retrieve a list of all brands (e.g., Yealink and Polycom) by client.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :brand_name 
@@ -578,7 +647,7 @@ module OpenapiClient
       data
     end
 
-    # Get Brand
+    # Get Brand List
     # Retrieve a list of all brands (e.g., Yealink and Polycom) by client.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :brand_name 
@@ -638,7 +707,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Generate config file
+    # Generate Config File
     # Generate a configuration file that includes a list of parameters passed to the specified template_id in the request payload, with populated values returned in the response.
     # @param params [ModelsGenerateConfigFileRequest] body params to generate config file
     # @param [Hash] opts the optional parameters
@@ -648,7 +717,7 @@ module OpenapiClient
       data
     end
 
-    # Generate config file
+    # Generate Config File
     # Generate a configuration file that includes a list of parameters passed to the specified template_id in the request payload, with populated values returned in the response.
     # @param params [ModelsGenerateConfigFileRequest] body params to generate config file
     # @param [Hash] opts the optional parameters

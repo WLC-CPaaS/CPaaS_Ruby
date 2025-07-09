@@ -4,13 +4,13 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **address_1** | **String** |  |  |
+| **address_1** | **String** |  | [optional] |
 | **address_2** | **String** |  | [optional] |
-| **community** | **String** |  |  |
+| **community** | **String** |  | [optional] |
 | **plus_four** | **String** |  | [optional] |
-| **postal_code** | **String** |  |  |
-| **state** | **String** |  |  |
-| **type** | **String** |  | [optional] |
+| **postal_code** | **String** |  | [optional] |
+| **state** | **String** |  | [optional] |
+| **type** | **String** |  |  |
 
 ## Example
 

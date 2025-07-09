@@ -23,7 +23,7 @@ module OpenapiClient
     # Retrieve a list of calls parked on hold in a numbered slot.
     # @param account_id [String] Account ID, 32 alpha numeric
     # @param [Hash] opts the optional parameters
-    # @return [ServiceDocsParkedcallGet]
+    # @return [ServiceDocsCallparkGet]
     def v1_account_account_id_parkedcall_get(account_id, opts = {})
       data, _status_code, _headers = v1_account_account_id_parkedcall_get_with_http_info(account_id, opts)
       data
@@ -33,7 +33,7 @@ module OpenapiClient
     # Retrieve a list of calls parked on hold in a numbered slot.
     # @param account_id [String] Account ID, 32 alpha numeric
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ServiceDocsParkedcallGet, Integer, Hash)>] ServiceDocsParkedcallGet data, response status code and response headers
+    # @return [Array<(ServiceDocsCallparkGet, Integer, Hash)>] ServiceDocsCallparkGet data, response status code and response headers
     def v1_account_account_id_parkedcall_get_with_http_info(account_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CallParkApi.v1_account_account_id_parkedcall_get ...'
@@ -60,7 +60,7 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ServiceDocsParkedcallGet'
+      return_type = opts[:debug_return_type] || 'ServiceDocsCallparkGet'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['BearerAuth']

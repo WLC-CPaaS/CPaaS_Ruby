@@ -23,13 +23,16 @@ module OpenapiClient
 
     attr_accessor :id
 
+    attr_accessor :line_keys
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'endpoint_brand' => :'endpoint_brand',
         :'endpoint_family' => :'endpoint_family',
         :'endpoint_model' => :'endpoint_model',
-        :'id' => :'id'
+        :'id' => :'id',
+        :'line_keys' => :'line_keys'
       }
     end
 
@@ -49,7 +52,8 @@ module OpenapiClient
         :'endpoint_brand' => :'String',
         :'endpoint_family' => :'String',
         :'endpoint_model' => :'String',
-        :'id' => :'String'
+        :'id' => :'String',
+        :'line_keys' => :'Array<ServiceVOIPDeviceAddEditLineKey>'
       }
     end
 
@@ -90,6 +94,12 @@ module OpenapiClient
       if attributes.key?(:'id')
         self.id = attributes[:'id']
       end
+
+      if attributes.key?(:'line_keys')
+        if (value = attributes[:'line_keys']).is_a?(Array)
+          self.line_keys = value
+        end
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -115,7 +125,8 @@ module OpenapiClient
           endpoint_brand == o.endpoint_brand &&
           endpoint_family == o.endpoint_family &&
           endpoint_model == o.endpoint_model &&
-          id == o.id
+          id == o.id &&
+          line_keys == o.line_keys
     end
 
     # @see the `==` method
@@ -127,7 +138,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [endpoint_brand, endpoint_family, endpoint_model, id].hash
+      [endpoint_brand, endpoint_family, endpoint_model, id, line_keys].hash
     end
 
     # Builds the object from hash

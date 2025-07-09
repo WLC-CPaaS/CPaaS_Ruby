@@ -85,7 +85,7 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://API_HOSTNAME*
+All URIs are relative to *http://api.beta.cpaaslabs.net*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -200,16 +200,16 @@ Class | Method | HTTP request | Description
 *OpenapiClient::PresenceApi* | [**v1_account_account_id_presence_extension_put**](docs/PresenceApi.md#v1_account_account_id_presence_extension_put) | **PUT** /v1/account/{accountID}/presence/{extension} | Set/Reset Presence for Extension
 *OpenapiClient::PresenceApi* | [**v1_account_account_id_presence_get**](docs/PresenceApi.md#v1_account_account_id_presence_get) | **GET** /v1/account/{accountID}/presence | Get Presence Details
 *OpenapiClient::PresenceApi* | [**v1_account_account_id_user_user_id_presence_put**](docs/PresenceApi.md#v1_account_account_id_user_user_id_presence_put) | **PUT** /v1/account/{accountID}/user/{userID}/presence | Set/Reset Presence for User
-*OpenapiClient::ProvisionApi* | [**v1_account_account_id_provision_filename_get**](docs/ProvisionApi.md#v1_account_account_id_provision_filename_get) | **GET** /v1/account/{accountID}/provision/{filename} | 
-*OpenapiClient::ProvisioningApi* | [**v1_ap_brand_brand_family_family_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_get) | **GET** /v1/ap/brand/{brand}/family/{family} | Get Family
+*OpenapiClient::ProvisioningApi* | [**v1_account_account_id_provision_filename_get**](docs/ProvisioningApi.md#v1_account_account_id_provision_filename_get) | **GET** /v1/account/{accountID}/provision/{filename} | Get Config File Details
+*OpenapiClient::ProvisioningApi* | [**v1_ap_brand_brand_family_family_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_get) | **GET** /v1/ap/brand/{brand}/family/{family} | Get Family Details
 *OpenapiClient::ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model | Get Model List
-*OpenapiClient::ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model} | Get Model
+*OpenapiClient::ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model} | Get Model Details
 *OpenapiClient::ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_template_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_template_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template | Get Template List
-*OpenapiClient::ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_template_template_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_template_template_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template/{template} | Get Template
+*OpenapiClient::ProvisioningApi* | [**v1_ap_brand_brand_family_family_model_model_template_template_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_family_model_model_template_template_get) | **GET** /v1/ap/brand/{brand}/family/{family}/model/{model}/template/{template} | Get Template Details
 *OpenapiClient::ProvisioningApi* | [**v1_ap_brand_brand_family_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_family_get) | **GET** /v1/ap/brand/{brand}/family | Get Family List
-*OpenapiClient::ProvisioningApi* | [**v1_ap_brand_brand_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_get) | **GET** /v1/ap/brand/{brand} | Get Brand
-*OpenapiClient::ProvisioningApi* | [**v1_ap_brand_get**](docs/ProvisioningApi.md#v1_ap_brand_get) | **GET** /v1/ap/brand | Get Brand
-*OpenapiClient::ProvisioningApi* | [**v1_ap_configfile_generate_post**](docs/ProvisioningApi.md#v1_ap_configfile_generate_post) | **POST** /v1/ap/configfile/generate | Generate config file
+*OpenapiClient::ProvisioningApi* | [**v1_ap_brand_brand_get**](docs/ProvisioningApi.md#v1_ap_brand_brand_get) | **GET** /v1/ap/brand/{brand} | Get Brand Details
+*OpenapiClient::ProvisioningApi* | [**v1_ap_brand_get**](docs/ProvisioningApi.md#v1_ap_brand_get) | **GET** /v1/ap/brand | Get Brand List
+*OpenapiClient::ProvisioningApi* | [**v1_ap_configfile_generate_post**](docs/ProvisioningApi.md#v1_ap_configfile_generate_post) | **POST** /v1/ap/configfile/generate | Generate Config File
 *OpenapiClient::SMSApi* | [**v1_sms_account_account_id_campaign_campaign_id_import_get**](docs/SMSApi.md#v1_sms_account_account_id_campaign_campaign_id_import_get) | **GET** /v1/sms/account/{accountID}/campaign/{campaignID}/import | 
 *OpenapiClient::SMSApi* | [**v1_sms_account_account_id_campaign_campaign_id_import_post**](docs/SMSApi.md#v1_sms_account_account_id_campaign_campaign_id_import_post) | **POST** /v1/sms/account/{accountID}/campaign/{campaignID}/import | 
 *OpenapiClient::SMSApi* | [**v1_sms_account_account_id_campaign_campaign_id_phonenumber_get**](docs/SMSApi.md#v1_sms_account_account_id_campaign_campaign_id_phonenumber_get) | **GET** /v1/sms/account/{accountID}/campaign/{campaignID}/phonenumber | 
@@ -309,6 +309,7 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::ModelsUserOutputFullCalleridInternal](docs/ModelsUserOutputFullCalleridInternal.md)
  - [OpenapiClient::ModelsVOIPAccountMusicOnHold](docs/ModelsVOIPAccountMusicOnHold.md)
  - [OpenapiClient::ModelsVOIPAccountOutputFullCallerid](docs/ModelsVOIPAccountOutputFullCallerid.md)
+ - [OpenapiClient::ModelsVOIPDeviceOutputLineKey](docs/ModelsVOIPDeviceOutputLineKey.md)
  - [OpenapiClient::ModelsVOIPSharedDoNotDisturb](docs/ModelsVOIPSharedDoNotDisturb.md)
  - [OpenapiClient::ProvisioningDocsDocsBrandOutputSingle](docs/ProvisioningDocsDocsBrandOutputSingle.md)
  - [OpenapiClient::ProvisioningDocsDocsBrandsOutput](docs/ProvisioningDocsDocsBrandsOutput.md)
@@ -351,14 +352,6 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::ServiceChannelOutput](docs/ServiceChannelOutput.md)
  - [OpenapiClient::ServiceDeviceOutputShort](docs/ServiceDeviceOutputShort.md)
  - [OpenapiClient::ServiceDeviceStatusOutput](docs/ServiceDeviceStatusOutput.md)
- - [OpenapiClient::ServiceDocE911ActiveLocationOutput](docs/ServiceDocE911ActiveLocationOutput.md)
- - [OpenapiClient::ServiceDocE911ActiveLocationURIApiOutput](docs/ServiceDocE911ActiveLocationURIApiOutput.md)
- - [OpenapiClient::ServiceDocE911AddLocationOutput](docs/ServiceDocE911AddLocationOutput.md)
- - [OpenapiClient::ServiceDocE911LocationsURIApiOutput](docs/ServiceDocE911LocationsURIApiOutput.md)
- - [OpenapiClient::ServiceDocE911RemoveLocationOutput](docs/ServiceDocE911RemoveLocationOutput.md)
- - [OpenapiClient::ServiceDocE911RemoveURIApiOutput](docs/ServiceDocE911RemoveURIApiOutput.md)
- - [OpenapiClient::ServiceDocE911URIsApiOutput](docs/ServiceDocE911URIsApiOutput.md)
- - [OpenapiClient::ServiceDocE911ValidateLocationOutput](docs/ServiceDocE911ValidateLocationOutput.md)
  - [OpenapiClient::ServiceDocGroupGetAll](docs/ServiceDocGroupGetAll.md)
  - [OpenapiClient::ServiceDocGroupGetSingle](docs/ServiceDocGroupGetSingle.md)
  - [OpenapiClient::ServiceDocsAccountAPIKey](docs/ServiceDocsAccountAPIKey.md)
@@ -377,12 +370,12 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::ServiceDocsCallQueueGetRoles](docs/ServiceDocsCallQueueGetRoles.md)
  - [OpenapiClient::ServiceDocsCallQueueGetSingle](docs/ServiceDocsCallQueueGetSingle.md)
  - [OpenapiClient::ServiceDocsCallQueueGetSingleStatus](docs/ServiceDocsCallQueueGetSingleStatus.md)
- - [OpenapiClient::ServiceDocsCallQueueMemberGetSingle](docs/ServiceDocsCallQueueMemberGetSingle.md)
- - [OpenapiClient::ServiceDocsCallQueueResponseShort](docs/ServiceDocsCallQueueResponseShort.md)
+ - [OpenapiClient::ServiceDocsCallQueueRecipientLoginLogoutOutput](docs/ServiceDocsCallQueueRecipientLoginLogoutOutput.md)
  - [OpenapiClient::ServiceDocsCallRecordingGetAll](docs/ServiceDocsCallRecordingGetAll.md)
  - [OpenapiClient::ServiceDocsCallRecordingGetSingle](docs/ServiceDocsCallRecordingGetSingle.md)
  - [OpenapiClient::ServiceDocsCallflowGetAll](docs/ServiceDocsCallflowGetAll.md)
  - [OpenapiClient::ServiceDocsCallflowGetSingle](docs/ServiceDocsCallflowGetSingle.md)
+ - [OpenapiClient::ServiceDocsCallparkGet](docs/ServiceDocsCallparkGet.md)
  - [OpenapiClient::ServiceDocsCampaignImportOutput](docs/ServiceDocsCampaignImportOutput.md)
  - [OpenapiClient::ServiceDocsCampaignImportedGetAllOutput](docs/ServiceDocsCampaignImportedGetAllOutput.md)
  - [OpenapiClient::ServiceDocsCampaignPhoneNumberOutput](docs/ServiceDocsCampaignPhoneNumberOutput.md)
@@ -395,6 +388,14 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::ServiceDocsDeviceGetSingle](docs/ServiceDocsDeviceGetSingle.md)
  - [OpenapiClient::ServiceDocsDeviceReboot](docs/ServiceDocsDeviceReboot.md)
  - [OpenapiClient::ServiceDocsDeviceStatus](docs/ServiceDocsDeviceStatus.md)
+ - [OpenapiClient::ServiceDocsE911ActiveLocationOutput](docs/ServiceDocsE911ActiveLocationOutput.md)
+ - [OpenapiClient::ServiceDocsE911ActiveLocationURIApiOutput](docs/ServiceDocsE911ActiveLocationURIApiOutput.md)
+ - [OpenapiClient::ServiceDocsE911AddLocationOutput](docs/ServiceDocsE911AddLocationOutput.md)
+ - [OpenapiClient::ServiceDocsE911LocationsURIApiOutput](docs/ServiceDocsE911LocationsURIApiOutput.md)
+ - [OpenapiClient::ServiceDocsE911RemoveLocationOutput](docs/ServiceDocsE911RemoveLocationOutput.md)
+ - [OpenapiClient::ServiceDocsE911RemoveURIApiOutput](docs/ServiceDocsE911RemoveURIApiOutput.md)
+ - [OpenapiClient::ServiceDocsE911URIsApiOutput](docs/ServiceDocsE911URIsApiOutput.md)
+ - [OpenapiClient::ServiceDocsE911ValidateLocationOutput](docs/ServiceDocsE911ValidateLocationOutput.md)
  - [OpenapiClient::ServiceDocsEndpointList](docs/ServiceDocsEndpointList.md)
  - [OpenapiClient::ServiceDocsEventDailySummary](docs/ServiceDocsEventDailySummary.md)
  - [OpenapiClient::ServiceDocsEventDetail](docs/ServiceDocsEventDetail.md)
@@ -407,12 +408,12 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::ServiceDocsMediaGetSingle](docs/ServiceDocsMediaGetSingle.md)
  - [OpenapiClient::ServiceDocsMetaflowGet](docs/ServiceDocsMetaflowGet.md)
  - [OpenapiClient::ServiceDocsOrderPhonenumber](docs/ServiceDocsOrderPhonenumber.md)
- - [OpenapiClient::ServiceDocsParkedcallGet](docs/ServiceDocsParkedcallGet.md)
  - [OpenapiClient::ServiceDocsPhonenumberAssignPayload](docs/ServiceDocsPhonenumberAssignPayload.md)
  - [OpenapiClient::ServiceDocsPhonenumberSearchGetAll](docs/ServiceDocsPhonenumberSearchGetAll.md)
  - [OpenapiClient::ServiceDocsPhonenumberUnassignPayload](docs/ServiceDocsPhonenumberUnassignPayload.md)
  - [OpenapiClient::ServiceDocsPingGet](docs/ServiceDocsPingGet.md)
  - [OpenapiClient::ServiceDocsPresenceGet](docs/ServiceDocsPresenceGet.md)
+ - [OpenapiClient::ServiceDocsQueueMembershipOutput](docs/ServiceDocsQueueMembershipOutput.md)
  - [OpenapiClient::ServiceDocsStorageGet](docs/ServiceDocsStorageGet.md)
  - [OpenapiClient::ServiceDocsSystemStatusGetSingle](docs/ServiceDocsSystemStatusGetSingle.md)
  - [OpenapiClient::ServiceDocsTemporalRuleGetAll](docs/ServiceDocsTemporalRuleGetAll.md)
@@ -459,9 +460,9 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::ServicePhoneNumberSearchOutput](docs/ServicePhoneNumberSearchOutput.md)
  - [OpenapiClient::ServicePhonenumberOutput](docs/ServicePhonenumberOutput.md)
  - [OpenapiClient::ServicePingOutput](docs/ServicePingOutput.md)
- - [OpenapiClient::ServiceQueueRecipientOutputFull](docs/ServiceQueueRecipientOutputFull.md)
- - [OpenapiClient::ServiceQueueRecipientOutputFullFeatures](docs/ServiceQueueRecipientOutputFullFeatures.md)
- - [OpenapiClient::ServiceQueueRecipientOutputFullRecipient](docs/ServiceQueueRecipientOutputFullRecipient.md)
+ - [OpenapiClient::ServiceQueueRecipientOutput](docs/ServiceQueueRecipientOutput.md)
+ - [OpenapiClient::ServiceQueueRecipientOutputRecipient](docs/ServiceQueueRecipientOutputRecipient.md)
+ - [OpenapiClient::ServiceQueueRecipientOutputRecipientFeatures](docs/ServiceQueueRecipientOutputRecipientFeatures.md)
  - [OpenapiClient::ServiceRemoveURIApiOutput](docs/ServiceRemoveURIApiOutput.md)
  - [OpenapiClient::ServiceStorageOutput](docs/ServiceStorageOutput.md)
  - [OpenapiClient::ServiceStoragePlan](docs/ServiceStoragePlan.md)
@@ -498,6 +499,7 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::ServiceVOIPDeviceAddEdit3d](docs/ServiceVOIPDeviceAddEdit3d.md)
  - [OpenapiClient::ServiceVOIPDeviceAddEdit4](docs/ServiceVOIPDeviceAddEdit4.md)
  - [OpenapiClient::ServiceVOIPDeviceAddEdit5](docs/ServiceVOIPDeviceAddEdit5.md)
+ - [OpenapiClient::ServiceVOIPDeviceAddEditLineKey](docs/ServiceVOIPDeviceAddEditLineKey.md)
  - [OpenapiClient::ServiceVOIPDeviceAddEditProvision](docs/ServiceVOIPDeviceAddEditProvision.md)
  - [OpenapiClient::ServiceVOIPGroupAddEdit2](docs/ServiceVOIPGroupAddEdit2.md)
  - [OpenapiClient::ServiceVOIPImpersonateUser](docs/ServiceVOIPImpersonateUser.md)

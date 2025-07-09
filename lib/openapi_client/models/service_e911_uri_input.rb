@@ -69,8 +69,6 @@ module OpenapiClient
 
       if attributes.key?(:'caller_name')
         self.caller_name = attributes[:'caller_name']
-      else
-        self.caller_name = nil
       end
 
       if attributes.key?(:'uri')
@@ -85,10 +83,6 @@ module OpenapiClient
     def list_invalid_properties
       warn '[DEPRECATED] the `list_invalid_properties` method is obsolete'
       invalid_properties = Array.new
-      if @caller_name.nil?
-        invalid_properties.push('invalid value for "caller_name", caller_name cannot be nil.')
-      end
-
       if @uri.nil?
         invalid_properties.push('invalid value for "uri", uri cannot be nil.')
       end
@@ -100,19 +94,8 @@ module OpenapiClient
     # @return true if the model is valid
     def valid?
       warn '[DEPRECATED] the `valid?` method is obsolete'
-      return false if @caller_name.nil?
       return false if @uri.nil?
       true
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] caller_name Value to be assigned
-    def caller_name=(caller_name)
-      if caller_name.nil?
-        fail ArgumentError, 'caller_name cannot be nil'
-      end
-
-      @caller_name = caller_name
     end
 
     # Custom attribute writer method with validation
