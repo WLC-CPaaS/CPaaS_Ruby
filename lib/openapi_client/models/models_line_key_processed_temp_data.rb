@@ -14,43 +14,22 @@ require 'date'
 require 'time'
 
 module OpenapiClient
-  class ModelsConfigFileParameter
-    attr_accessor :extension
+  class ModelsLineKeyProcessedTempData
+    attr_accessor :label
 
-    attr_accessor :https_host
+    attr_accessor :line
 
-    attr_accessor :https_password
+    attr_accessor :type
 
-    attr_accessor :https_username
-
-    attr_accessor :line_keys
-
-    attr_accessor :mac_address
-
-    attr_accessor :realm
-
-    attr_accessor :sip_password
-
-    attr_accessor :sip_username
-
-    attr_accessor :timezone
-
-    attr_accessor :voicemail_box_number
+    attr_accessor :value
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'extension' => :'extension',
-        :'https_host' => :'https_host',
-        :'https_password' => :'https_password',
-        :'https_username' => :'https_username',
-        :'line_keys' => :'line_keys',
-        :'mac_address' => :'mac_address',
-        :'realm' => :'realm',
-        :'sip_password' => :'sip_password',
-        :'sip_username' => :'sip_username',
-        :'timezone' => :'timezone',
-        :'voicemail_box_number' => :'voicemail_box_number'
+        :'label' => :'label',
+        :'line' => :'line',
+        :'type' => :'type',
+        :'value' => :'value'
       }
     end
 
@@ -67,17 +46,10 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'extension' => :'String',
-        :'https_host' => :'String',
-        :'https_password' => :'String',
-        :'https_username' => :'String',
-        :'line_keys' => :'Array<ModelsLineKeyProcessedTempData>',
-        :'mac_address' => :'String',
-        :'realm' => :'String',
-        :'sip_password' => :'String',
-        :'sip_username' => :'String',
-        :'timezone' => :'String',
-        :'voicemail_box_number' => :'String'
+        :'label' => :'String',
+        :'line' => :'Integer',
+        :'type' => :'String',
+        :'value' => :'String'
       }
     end
 
@@ -91,62 +63,32 @@ module OpenapiClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `OpenapiClient::ModelsConfigFileParameter` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `OpenapiClient::ModelsLineKeyProcessedTempData` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       acceptable_attribute_map = self.class.acceptable_attribute_map
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!acceptable_attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `OpenapiClient::ModelsConfigFileParameter`. Please check the name to make sure it's valid. List of attributes: " + acceptable_attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `OpenapiClient::ModelsLineKeyProcessedTempData`. Please check the name to make sure it's valid. List of attributes: " + acceptable_attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'extension')
-        self.extension = attributes[:'extension']
+      if attributes.key?(:'label')
+        self.label = attributes[:'label']
       end
 
-      if attributes.key?(:'https_host')
-        self.https_host = attributes[:'https_host']
+      if attributes.key?(:'line')
+        self.line = attributes[:'line']
       end
 
-      if attributes.key?(:'https_password')
-        self.https_password = attributes[:'https_password']
+      if attributes.key?(:'type')
+        self.type = attributes[:'type']
       end
 
-      if attributes.key?(:'https_username')
-        self.https_username = attributes[:'https_username']
-      end
-
-      if attributes.key?(:'line_keys')
-        if (value = attributes[:'line_keys']).is_a?(Array)
-          self.line_keys = value
-        end
-      end
-
-      if attributes.key?(:'mac_address')
-        self.mac_address = attributes[:'mac_address']
-      end
-
-      if attributes.key?(:'realm')
-        self.realm = attributes[:'realm']
-      end
-
-      if attributes.key?(:'sip_password')
-        self.sip_password = attributes[:'sip_password']
-      end
-
-      if attributes.key?(:'sip_username')
-        self.sip_username = attributes[:'sip_username']
-      end
-
-      if attributes.key?(:'timezone')
-        self.timezone = attributes[:'timezone']
-      end
-
-      if attributes.key?(:'voicemail_box_number')
-        self.voicemail_box_number = attributes[:'voicemail_box_number']
+      if attributes.key?(:'value')
+        self.value = attributes[:'value']
       end
     end
 
@@ -170,17 +112,10 @@ module OpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          extension == o.extension &&
-          https_host == o.https_host &&
-          https_password == o.https_password &&
-          https_username == o.https_username &&
-          line_keys == o.line_keys &&
-          mac_address == o.mac_address &&
-          realm == o.realm &&
-          sip_password == o.sip_password &&
-          sip_username == o.sip_username &&
-          timezone == o.timezone &&
-          voicemail_box_number == o.voicemail_box_number
+          label == o.label &&
+          line == o.line &&
+          type == o.type &&
+          value == o.value
     end
 
     # @see the `==` method
@@ -192,7 +127,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [extension, https_host, https_password, https_username, line_keys, mac_address, realm, sip_password, sip_username, timezone, voicemail_box_number].hash
+      [label, line, type, value].hash
     end
 
     # Builds the object from hash

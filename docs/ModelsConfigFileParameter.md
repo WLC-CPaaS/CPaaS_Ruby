@@ -8,6 +8,7 @@
 | **https_host** | **String** |  | [optional] |
 | **https_password** | **String** |  | [optional] |
 | **https_username** | **String** |  | [optional] |
+| **line_keys** | [**Array&lt;ModelsLineKeyProcessedTempData&gt;**](ModelsLineKeyProcessedTempData.md) |  | [optional] |
 | **mac_address** | **String** |  | [optional] |
 | **realm** | **String** |  | [optional] |
 | **sip_password** | **String** |  | [optional] |
@@ -25,6 +26,7 @@ instance = OpenapiClient::ModelsConfigFileParameter.new(
   https_host: null,
   https_password: null,
   https_username: null,
+  line_keys: null,
   mac_address: null,
   realm: null,
   sip_password: null,

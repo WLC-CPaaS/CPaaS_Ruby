@@ -61,6 +61,7 @@ docs/ModelsDeviceOutputFullProvision.md
 docs/ModelsDeviceOutputFullSIP.md
 docs/ModelsFamily.md
 docs/ModelsGenerateConfigFileRequest.md
+docs/ModelsLineKeyProcessedTempData.md
 docs/ModelsModel.md
 docs/ModelsMusicOnHold.md
 docs/ModelsTemplate.md
@@ -365,6 +366,7 @@ lib/openapi_client/models/models_device_output_full_provision.rb
 lib/openapi_client/models/models_device_output_full_sip.rb
 lib/openapi_client/models/models_family.rb
 lib/openapi_client/models/models_generate_config_file_request.rb
+lib/openapi_client/models/models_line_key_processed_temp_data.rb
 lib/openapi_client/models/models_model.rb
 lib/openapi_client/models/models_music_on_hold.rb
 lib/openapi_client/models/models_template.rb
@@ -589,20 +591,5 @@ lib/openapi_client/models/service_webhook_delete_output.rb
 lib/openapi_client/models/service_webhook_edit.rb
 lib/openapi_client/version.rb
 openapi_client.gemspec
-spec/models/models_voip_device_output_line_key_spec.rb
-spec/models/service_docs_call_queue_recipient_login_logout_output_spec.rb
-spec/models/service_docs_callpark_get_spec.rb
-spec/models/service_docs_e911_active_location_output_spec.rb
-spec/models/service_docs_e911_active_location_uri_api_output_spec.rb
-spec/models/service_docs_e911_add_location_output_spec.rb
-spec/models/service_docs_e911_locations_uri_api_output_spec.rb
-spec/models/service_docs_e911_remove_location_output_spec.rb
-spec/models/service_docs_e911_remove_uri_api_output_spec.rb
-spec/models/service_docs_e911_uris_api_output_spec.rb
-spec/models/service_docs_e911_validate_location_output_spec.rb
-spec/models/service_docs_queue_membership_output_spec.rb
-spec/models/service_queue_recipient_output_recipient_features_spec.rb
-spec/models/service_queue_recipient_output_recipient_spec.rb
-spec/models/service_queue_recipient_output_spec.rb
-spec/models/service_voip_device_add_edit_line_key_spec.rb
+spec/models/models_line_key_processed_temp_data_spec.rb
 spec/spec_helper.rb

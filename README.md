@@ -299,6 +299,7 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::ModelsDeviceOutputFullSIP](docs/ModelsDeviceOutputFullSIP.md)
  - [OpenapiClient::ModelsFamily](docs/ModelsFamily.md)
  - [OpenapiClient::ModelsGenerateConfigFileRequest](docs/ModelsGenerateConfigFileRequest.md)
+ - [OpenapiClient::ModelsLineKeyProcessedTempData](docs/ModelsLineKeyProcessedTempData.md)
  - [OpenapiClient::ModelsModel](docs/ModelsModel.md)
  - [OpenapiClient::ModelsMusicOnHold](docs/ModelsMusicOnHold.md)
  - [OpenapiClient::ModelsTemplate](docs/ModelsTemplate.md)
