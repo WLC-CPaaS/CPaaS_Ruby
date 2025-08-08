@@ -217,7 +217,6 @@ docs/ServiceFeatureCode.md
 docs/ServiceGroupOutputFull.md
 docs/ServiceGroupOutputShort.md
 docs/ServiceImpersonateUserOutputFull.md
-docs/ServiceImpersonatedUserInfo.md
 docs/ServiceMediaOutputFull.md
 docs/ServiceMediaOutputShort.md
 docs/ServiceMetaflowOutput.md
@@ -242,7 +241,6 @@ docs/ServiceSystemStatusCPAASService.md
 docs/ServiceSystemStatusMessagingService.md
 docs/ServiceSystemStatusOutput.md
 docs/ServiceSystemStatusSupportService.md
-docs/ServiceSystemStatusVOIPService.md
 docs/ServiceTTS.md
 docs/ServiceTemporalRuleOutputFull.md
 docs/ServiceTemporalRuleOutputShort.md
@@ -518,7 +516,6 @@ lib/openapi_client/models/service_feature_code.rb
 lib/openapi_client/models/service_group_output_full.rb
 lib/openapi_client/models/service_group_output_short.rb
 lib/openapi_client/models/service_impersonate_user_output_full.rb
-lib/openapi_client/models/service_impersonated_user_info.rb
 lib/openapi_client/models/service_media_output_full.rb
 lib/openapi_client/models/service_media_output_short.rb
 lib/openapi_client/models/service_metaflow_output.rb
@@ -543,7 +540,6 @@ lib/openapi_client/models/service_system_status_cpaas_service.rb
 lib/openapi_client/models/service_system_status_messaging_service.rb
 lib/openapi_client/models/service_system_status_output.rb
 lib/openapi_client/models/service_system_status_support_service.rb
-lib/openapi_client/models/service_system_status_voip_service.rb
 lib/openapi_client/models/service_temporal_rule_output_full.rb
 lib/openapi_client/models/service_temporal_rule_output_short.rb
 lib/openapi_client/models/service_temporal_rule_set_output_full.rb
@@ -591,5 +587,4 @@ lib/openapi_client/models/service_webhook_delete_output.rb
 lib/openapi_client/models/service_webhook_edit.rb
 lib/openapi_client/version.rb
 openapi_client.gemspec
-spec/models/models_line_key_processed_temp_data_spec.rb
 spec/spec_helper.rb

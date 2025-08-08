@@ -21,15 +21,12 @@ module OpenapiClient
 
     attr_accessor :support_services
 
-    attr_accessor :voip_services
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'cpaas_services' => :'cpaas_services',
         :'messaging_services' => :'messaging_services',
-        :'support_services' => :'support_services',
-        :'voip_services' => :'voip_services'
+        :'support_services' => :'support_services'
       }
     end
 
@@ -48,8 +45,7 @@ module OpenapiClient
       {
         :'cpaas_services' => :'ServiceSystemStatusCPAASService',
         :'messaging_services' => :'ServiceSystemStatusMessagingService',
-        :'support_services' => :'ServiceSystemStatusSupportService',
-        :'voip_services' => :'ServiceSystemStatusVOIPService'
+        :'support_services' => :'ServiceSystemStatusSupportService'
       }
     end
 
@@ -86,10 +82,6 @@ module OpenapiClient
       if attributes.key?(:'support_services')
         self.support_services = attributes[:'support_services']
       end
-
-      if attributes.key?(:'voip_services')
-        self.voip_services = attributes[:'voip_services']
-      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -114,8 +106,7 @@ module OpenapiClient
       self.class == o.class &&
           cpaas_services == o.cpaas_services &&
           messaging_services == o.messaging_services &&
-          support_services == o.support_services &&
-          voip_services == o.voip_services
+          support_services == o.support_services
     end
 
     # @see the `==` method
@@ -127,7 +118,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [cpaas_services, messaging_services, support_services, voip_services].hash
+      [cpaas_services, messaging_services, support_services].hash
     end
 
     # Builds the object from hash

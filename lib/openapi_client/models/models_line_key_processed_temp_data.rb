@@ -17,8 +17,6 @@ module OpenapiClient
   class ModelsLineKeyProcessedTempData
     attr_accessor :label
 
-    attr_accessor :line
-
     attr_accessor :type
 
     attr_accessor :value
@@ -27,7 +25,6 @@ module OpenapiClient
     def self.attribute_map
       {
         :'label' => :'label',
-        :'line' => :'line',
         :'type' => :'type',
         :'value' => :'value'
       }
@@ -47,7 +44,6 @@ module OpenapiClient
     def self.openapi_types
       {
         :'label' => :'String',
-        :'line' => :'Integer',
         :'type' => :'String',
         :'value' => :'String'
       }
@@ -77,10 +73,6 @@ module OpenapiClient
 
       if attributes.key?(:'label')
         self.label = attributes[:'label']
-      end
-
-      if attributes.key?(:'line')
-        self.line = attributes[:'line']
       end
 
       if attributes.key?(:'type')
@@ -113,7 +105,6 @@ module OpenapiClient
       return true if self.equal?(o)
       self.class == o.class &&
           label == o.label &&
-          line == o.line &&
           type == o.type &&
           value == o.value
     end
@@ -127,7 +118,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [label, line, type, value].hash
+      [label, type, value].hash
     end
 
     # Builds the object from hash

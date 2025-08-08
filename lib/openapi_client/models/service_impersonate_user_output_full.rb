@@ -15,36 +15,12 @@ require 'time'
 
 module OpenapiClient
   class ServiceImpersonateUserOutputFull
-    attr_accessor :account_id
-
-    attr_accessor :account_name
-
     attr_accessor :auth_token
-
-    attr_accessor :cluster_id
-
-    attr_accessor :is_master_account
-
-    attr_accessor :is_reseller
-
-    attr_accessor :owner_id
-
-    attr_accessor :reseller_id
-
-    attr_accessor :user_info
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'account_id' => :'account_id',
-        :'account_name' => :'account_name',
-        :'auth_token' => :'auth_token',
-        :'cluster_id' => :'cluster_id',
-        :'is_master_account' => :'is_master_account',
-        :'is_reseller' => :'is_reseller',
-        :'owner_id' => :'owner_id',
-        :'reseller_id' => :'reseller_id',
-        :'user_info' => :'user_info'
+        :'auth_token' => :'auth_token'
       }
     end
 
@@ -61,15 +37,7 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'account_id' => :'String',
-        :'account_name' => :'String',
-        :'auth_token' => :'String',
-        :'cluster_id' => :'String',
-        :'is_master_account' => :'Boolean',
-        :'is_reseller' => :'Boolean',
-        :'owner_id' => :'String',
-        :'reseller_id' => :'String',
-        :'user_info' => :'ServiceImpersonatedUserInfo'
+        :'auth_token' => :'String'
       }
     end
 
@@ -95,40 +63,8 @@ module OpenapiClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'account_id')
-        self.account_id = attributes[:'account_id']
-      end
-
-      if attributes.key?(:'account_name')
-        self.account_name = attributes[:'account_name']
-      end
-
       if attributes.key?(:'auth_token')
         self.auth_token = attributes[:'auth_token']
-      end
-
-      if attributes.key?(:'cluster_id')
-        self.cluster_id = attributes[:'cluster_id']
-      end
-
-      if attributes.key?(:'is_master_account')
-        self.is_master_account = attributes[:'is_master_account']
-      end
-
-      if attributes.key?(:'is_reseller')
-        self.is_reseller = attributes[:'is_reseller']
-      end
-
-      if attributes.key?(:'owner_id')
-        self.owner_id = attributes[:'owner_id']
-      end
-
-      if attributes.key?(:'reseller_id')
-        self.reseller_id = attributes[:'reseller_id']
-      end
-
-      if attributes.key?(:'user_info')
-        self.user_info = attributes[:'user_info']
       end
     end
 
@@ -152,15 +88,7 @@ module OpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          account_id == o.account_id &&
-          account_name == o.account_name &&
-          auth_token == o.auth_token &&
-          cluster_id == o.cluster_id &&
-          is_master_account == o.is_master_account &&
-          is_reseller == o.is_reseller &&
-          owner_id == o.owner_id &&
-          reseller_id == o.reseller_id &&
-          user_info == o.user_info
+          auth_token == o.auth_token
     end
 
     # @see the `==` method
@@ -172,7 +100,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [account_id, account_name, auth_token, cluster_id, is_master_account, is_reseller, owner_id, reseller_id, user_info].hash
+      [auth_token].hash
     end
 
     # Builds the object from hash
